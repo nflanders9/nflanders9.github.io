@@ -127,11 +127,11 @@ function convertToMS(timeString) {
 }
 
 var songIDs = '';        // an empty array of length ?
-var genreOfRadio;
+var genreOfRadio = '';
 
 function display_dictionary(genre){
     var myjson;
-	genreOfRadio = genre;
+	
     var blah = genre;
 	var songIDs2 = '';
     $.getJSON("https://api.spotify.com/v1/search?query=track%3A%22" + blah + "%22&offset=0&limit=50&type=track", function(json){
@@ -152,7 +152,7 @@ function display_dictionary(genre){
 			iteration = i;
         }
     }
-	
+	genreOfRadio = genreOfRadio.concat(genre);
 	getPlaylistEmbedURL();
     console.log("the total song times add up to " + counter + " having gone through " + iteration + " songs when the length of the trip is " + tripLength);
     
@@ -163,12 +163,16 @@ function display_dictionary(genre){
 function getPlaylistEmbedURL(){
 	
 	document.getElementById("playlist").innerHTML='asdfasdfsdf';
-	var embedURL = 'https://embed.spotify.com/?uri=spotify:trackset:title:';
+	var embedURL = 'https://embed.spotify.com/?uri=spotify:trackset:JournE Playlist:';
+	
+	//embedURL = embedURL.concat(genreOfRadio);
+	//embedURL = embedURL.concat(':');
+	//alert(embedURL);
 	embedURL = embedURL.concat(songIDs);
 	embedURL = embedURL.substring(0, embedURL.length-1);
 	//<iframe src="https://embed.spotify.com/?uri=spotify:trackset:Artist radio for Maroon 5:3wJIAMuPdEoBddWlovWXCX,1D1nixOVWOxvNfWi0UD7VX,52TSjnEfXo40EzuylAhf6k,0VHs1X9AhxYfmyvikPO8Mt,1cALRwswLHxeETC2WH1llE,0oayy8OHHzuT1URyldeu9P,6IuVrhdSJiQM02zh03w42J,0rityYtUvS3dIdY1lvWXaY,760GxmiU9FCmP5jgnLsNtz,0dSchkfNB8SzYj8Bx7bcCW,7qnNnQTGxdzI2wZWpa0vDD,0jdeV5dSB3kUBRqe1xQJbh" style="width:640px; height:520px;" frameborder="0" allowtransparency="true"></iframe>
 	
-	document.getElementById("playlist").innerHTML='<iframe src="'+embedURL+'"style="width:480px; height:520px;" frameborder="0" allowtransparency="true"></iframe>';
+	document.getElementById("playlist").innerHTML='<iframe src="'+embedURL+'"style="width:490px; height:550px;" frameborder="0" allowtransparency="true"></iframe>';
 }
 
 function deleteOverlays() {
