@@ -1,139 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
+
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="assets/ico/favicon.png">
 
     <title>Nick Flanders</title>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap Core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="assets/css/main.css" rel="stylesheet">
-    
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- Custom CSS -->
+    <link href="assets/css/stylish-portfolio.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-  </head>
+    <!-- Custom Fonts -->
+    <link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100|Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
 
-  <body>
+</head>
 
+<body>
 
-    <div class="container" style="max-width:75%">
-    	<div class="col-lg-6 col-lg-offset-3">
-    	
-    		<!-- ===== vCard Navigation ===== -->
-    		<div class="row w">
-    			<div class="col-md-4">
-    				<img class="img-responsive" src="assets/img/avatar.jpg" alt="">
-					<ul class="nav nav-tabs nav-stacked" id="myTab">
-					  <li class="active"><a href="#about">About</a></li>
-					  <li><a href="#profile">Profile</a></li>
-					  <li><a href="#experience">Experience</a></li>
-					  <li><a href="#portfolio">Portfolio</a></li>
-					  <li><a href="#contact">Contact</a></li>
-					</ul>    			
-				</div><!-- col-md-4 -->
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-light btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-brand">
+                <a href="#top"  onclick = $("#menu-close").click(); >Nick Flanders</a>
+            </li>
+            <li>
+                <a href="#top" onclick = $("#menu-close").click(); >Home</a>
+            </li>
+            <li>
+                <a href="#about" onclick = $("#menu-close").click(); >About</a>
+            </li>
+            <li>
+                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+            </li>
+            <li>
+                <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
+            </li>
+            <li>
+                <a href="#contact" onclick = $("#menu-close").click(); >Contact</a>
+            </li>
+        </ul>
+    </nav>
 
-    		<!-- ===== vCard Content ===== -->
-    			<div class="col-md-8">
-	    			<div class="tab-content">
-	    			
-	    			  <!-- ===== First Tab ===== -->
-					  <div class="tab-pane active" id="about">
-					  	<h3>Nick Flanders</h3>
-					  	<h5>Software Developer</h5>
-					  	<hr>
-					  	<p>I am a software developer with experience using Python, Java, C++, MySQL, Lisp and Scheme derivatives, JavaScript, HTML5, and CSS.</p> 
-					  	<p>I study computer science at Northeastern University and I am pursuing a minor in math.</p>
-					  	<p>I am currently working as a computer science tutor at Northeastern University.</p>
-					  	<p class="pull-right red"></p>
-					  </div><!-- tab about -->
-					  
-	    		<!-- ===== Second Tab ===== -->
-					  <div class="tab-pane" id="experience">
-					  	<h4><i class="icon-file-text-alt"></i> Experience</h4>
-					  	<p class="sm">
-					  		<grey>Software Engineering Intern</grey><br /><grey><i>Albany Engineered Composites</i><br /></grey>September 2014 - present<br/>
-					  		<p>This past summer, I worked as a Software Engineering Intern at Albany Engineered Composites where I worked primarily with Python
-					  	to develop and maintain a test, build, and release framework for a C++ application. I also built a GUI front end using Python and Tk in order to manage the test framework and make it convenient to execute custom test suites and edit test scripts.
-					  </div><!-- Tab Profile -->
+    <!-- Header -->
+    <header id="top" class="header">
+        <div class="text-vertical-center">
+            <img class="img-circle image-of-me" src="assets/img/me.jpg" />
+            <div class="title-box">
+                <h1 class="title-text" style="font-weight: 100">Nick Flanders</h1>
+                <h3>Computer Science Student</h3>
+            </div>
+            <br>
+            <a href="#about" class="btn btn-light btn-lg">About Me</a>
+        </div>
+    </header>
 
-				<!-- ===== Third Tab ===== -->
-					  <div class="tab-pane" id="profile">
-					  	<h4><i class="icon-file-text-alt"></i> Education</h4>
-					  	<p class="sm">
-					  		<grey>Northeastern University</grey><br />September 2014 - present<br/><br />
-					  		<grey>St. Paul's School Advanced Studies Program<br /><em>Artificial Intelligence</em></grey><br />Summer 2013<br/><br />
-                <grey>Goffstown High School</grey><br />September 2010 - June 2014<br/><br />
-					  	</p>
-					  	
-						  <h4><i class="icon-trophy"></i> Awards</h4>
-					  	<p class="sm">
-					  		<grey>Northeastern University Dean's List</grey> | Fall 2014, Spring 2015<br/>
-					  		<grey>Valedictorian</grey> | Goffstown High School<br/>
-                <grey>National AP Scholar</grey> | 2014<br/>
-                <grey>NH Science and Engineering Expo 2014</grey> | 2nd Place, Environmental Science<br/>
-					  	</p>
-					  </div><!-- Tab Profile -->
-					  
-	    			  <!-- ===== Fourth Tab ===== -->
-					  <div class="tab-pane" id="portfolio">
-						  <div class="row">
-							  <div class="col-xs-12 centered">
-							  	<img class="img-responsive" src="assets/img/journe-img1.jpg" alt="">
-							  	<a href="#"><h3><a href="http://nflanders9.github.io/JournE/landing.html">JournE</a></h3></a><br />
-                  <p class="sm">Have you ever arrived at your destination right when your favorite song comes on? JournE solves this problem. This webapp creates custom Spotify playlists based on your music tastes and the estimated length of your trip.<br /><br />
-                  <grey>Created at the Make BU 2015 Hackathon</grey></p>
-							  </div><!-- col-xs-6 -->
-						  </div><!-- row -->
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Who am I?</h2>
+                    <p class="lead">I'm a second-year computer science student at Northeastern University in Boston, MA. Currently, I am living in Sunnyvale, CA where I am working as a software engineering intern at Apple Maps.</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
 
-					  </div><!-- /Tab Portfolio -->
-					  
-	    			  <!-- ===== Fifth Tab ===== -->
-					  <div class="tab-pane" id="contact">
-						  <h4>Social Links</h4>
-						  <hr>
-						  <div class="row">
-							  <div class="col-xs-10">
-								  <p>
-								  	<i class="icon-globe"></i> - <a href="http://nflanders9.github.io"> nflanders9.github.io</a> <br/><br/>
-							  		<i class="icon-facebook"></i> - <a href="http://facebook.com/nick.flanders9"> nick.flanders9</a><br /><br/>
-                    <i class="icon-twitter"></i> - <a href="http://twitter.com/nflanders9"> @nflanders9</a><br /><br/>
-                    <i class="icon-linkedin"></i> - <a href="https://www.linkedin.com/in/nicholasflanders"> Nicholas Flanders</a><br /><br/>
-                    <i class="icon-github"></i> - <a href="https://github.com/nflanders9"> nflanders9</a><br /><br/>
-								  </p>
-							  </div><!-- col-xs-6 -->
-					  </div><!-- Tab Contact -->
-					  
-					</div><!-- Tab Content -->
-    			</div><!-- col-md-8 -->
-    		</div><!-- row w -->
-    	</div><!-- col-lg-6 -->
-    </div><!-- /.container -->
+    <!-- Experience -->
+    <section id="Experience" class="experience bg-primary">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2>Experience</h2>
+                    <hr class="small">
 
+                    <!-- Albany -->
+                    <h3 class="">Albany Engineered Composites</h3>
+                    <h4>Software Engineering Intern</h4>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
+                    <hr class="small">
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Callout -->
+    <aside class="callout">
+        <div class="text-vertical-center">
+            <h1>Projects</h1>
+        </div>
+    </aside>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center fixed-image-background">
+                    <h2>Our Work</h2>
+                    <hr class="small">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                    <a href="#" class="btn btn-dark">View More Items</a>
+                </div>
+                <!-- /.col-lg-10 -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container -->
+    </section>
+
+    <!-- Call to Action -->
+    <aside class="call-to-action bg-primary">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h3>The buttons below are impossible to resist.</h3>
+                    <a href="#" class="btn btn-lg btn-light">Click Me!</a>
+                    <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1 text-center">
+                    <ul class="list-inline">
+                        <li>
+                            <a href="mailto:flanders.n@husky.neu.edu"><i class="fa fa-envelope fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/nflanders9"><i class="fa fa-github fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/nicholasflanders"><i class="fa fa-linkedin fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://facebook.com/nick.flanders9"><i class="fa fa-facebook fa-fw fa-3x"></i></a>
+                        </li>
+                        <li>
+                            <a href="http://twitter.com/nflanders9"><i class="fa fa-twitter fa-fw fa-3x"></i></a>
+                        </li>
+                    </ul>
+                    <hr class="small">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
     <script src="assets/js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
-	<script>
-	$('#myTab a').click(function (e) {
-	  e.preventDefault()
-	  $(this).tab('show')
-	})	
-	</script>    
-    
-  </body>
+
+    <!-- Custom Theme JavaScript -->
+    <script>
+    // Closes the sidebar menu
+    $("#menu-close").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Opens the sidebar menu
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#sidebar-wrapper").toggleClass("active");
+    });
+
+    // Scrolls to the selected menu item on the page
+    $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
+
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html,body').animate({
+                        scrollTop: target.offset().top
+                    }, 500);
+                    return false;
+                }
+            }
+        });
+    });
+    </script>
+
+</body>
+
 </html>
