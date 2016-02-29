@@ -87,6 +87,8 @@ hr.small {
 
 .sidebar-nav {
     position: absolute;
+    font-size: 16pt;
+    font-weight: lighter;
     top: 0;
     width: 250px;
     margin: 0;
@@ -102,13 +104,14 @@ hr.small {
 .sidebar-nav li a {
     display: block;
     text-decoration: none;
-    color: #999;
+    color: #fae596;
 }
 
 .sidebar-nav li a:hover {
     text-decoration: none;
     color: #fff;
-    background: rgba(255,255,255,0.2);
+    background: #fae596;
+    color: #000;
 }
 
 .sidebar-nav li a:active,
@@ -123,7 +126,8 @@ hr.small {
 }
 
 .sidebar-nav > .sidebar-brand a {
-    color: #999;
+    color: #3fb0ac;
+    font-size: 20pt;
 }
 
 .sidebar-nav > .sidebar-brand a:hover {
@@ -175,7 +179,7 @@ hr.small {
     display: table;
     position: relative;
     margin: auto;
-    padding: 30px;
+    padding: 20px;
     color: white;
 }
 
@@ -218,10 +222,21 @@ hr.small {
 
 .portfolio {
     padding: 50px 0;
+    background-color: #dddfd4;
+}
+
+.portfolio-title {
+    font-weight: lighter;
+    color: #3fb0ac;
 }
 
 .portfolio-item {
+    padding: 20px;
     margin-bottom: 30px;
+    background-color: #fff;
+    border-color: #fae596;
+    border-width: 5px;
+    border-style: solid;
 }
 
 .img-portfolio {
@@ -257,7 +272,9 @@ hr.small {
 /* Footer */
 
 footer {
-    padding: 100px 0;
+    padding: 50px 0;
+    background-color: #3fb0ac;
+    color: #fff;
 }
 
 /* nav bar */
@@ -278,4 +295,8 @@ nav.navbar {
 .image-of-me {
     width: 200px;
     margin: 30px;
+}
+
+.icon-color {
+    color: #fae596;
 }
