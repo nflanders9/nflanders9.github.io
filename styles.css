@@ -1,0 +1,64 @@
+.full-width {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.name {
+    font-family: 'Pacifico', cursive;
+    font-size: 34pt;
+    text-align: center;
+}
+.subtitle {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 16pt;
+    text-align: center;
+}
+.navlinks {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 12pt;
+    text-align: center;
+    margin-top: 24px;
+}
+.blognavlinks {
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 12pt;
+    text-align: center;
+    margin-top: 12px;
+}
+.experience {
+    margin-top: 20px;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: center;
+}
+.photo {
+    margin-top: 0px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-mask-image:
+        -webkit-gradient(linear, left 60%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
+
+}
+.google_logo {
+    padding-top: 4px;
+    width: 80px;
+}
+.apple_logo {
+    width: 28px;
+}
+.paragraph {
+    font-family: 'Libre Baskerville', serif;
+    margin-top: 16px;
+    padding-bottom: 24px;
+    color: grey;
+}
+.contact {
+    background-color: lightgrey;
+    text-align: center;
+}
+.icon_color {
+    color: white;
+    padding: 6px;
+}
