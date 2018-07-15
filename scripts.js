@@ -13,7 +13,7 @@ async function animate() {
     await sleep(2000);
     for (var i = 0; i < commands.length; ++i) {
         await animateElement(commands[i], results[i], prompts[i + 1]);
-        await sleep(2000);
+        await sleep(1000);
     }
 }
 
@@ -54,7 +54,7 @@ async function typo(element, text, index) {
 }
 
 function getRandomKeyDelay(lastCharacter) {
-    return (Math.random() * 75) + (lastCharacter == ' ' ? 350 : 50);
+    return (Math.random() * 80) + (lastCharacter == ' ' ? 350 : 10);
 }
 
 function sleep (time) {
