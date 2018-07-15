@@ -10,7 +10,7 @@ async function animate() {
             prompt.hidden = true;
         }
     }
-    await sleep(2000);
+    await sleep(1000);
     for (var i = 0; i < commands.length; ++i) {
         await animateElement(commands[i], results[i], prompts[i + 1]);
         await sleep(1000);
@@ -22,10 +22,12 @@ async function animateElement(command, result, nextPrompt) {
     var originalText = command.textContent;
     command.textContent = "";
     command.hidden = false;
+    var didTypo = false; // don't make more than one mistake per command
     for (var i = 0; i < originalText.length; ++i) {
         command.textContent = command.textContent.slice(0, -1) + originalText[i] + "\u258B";
-        if (Math.random() < 0.03 && i + 1 < originalText.length) {
+        if (Math.random() < 0.025 && i + 1 < originalText.length && !didTypo) {
             await typo(command, originalText, i);
+            didTypo = true;
         }
         await sleep(getRandomKeyDelay());
     }
@@ -38,9 +40,10 @@ async function animateElement(command, result, nextPrompt) {
 }
 
 async function typo(element, text, index) {
-    element.textContent = element.textContent.slice(0, -1) + String.fromCharCode(Math.floor((Math.random() * 97) + 26));
+    var extraChar = String.fromCharCode(Math.floor((Math.random() * 26) + 97));
+    element.textContent = element.textContent.slice(0, -1) + extraChar + "\u258B";
     await sleep(getRandomKeyDelay());
-    var addedChars = 0;
+    var addedChars = 1;
     for (var i = index + 1; i < index + (3 + Math.random() * 5) && (i < text.length); ++i) {
         element.textContent = element.textContent.slice(0, -1) + text[i] + "\u258B";
         ++addedChars;
