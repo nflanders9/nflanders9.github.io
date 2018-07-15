@@ -1,68 +1,87 @@
-.full-width {
+html, body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    background-color: black;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+.nopadding {
+   padding: 0 !important;
+   margin: 0 !important;
+}
+
+.main-div {
+    background-color: black;
+    height: 100%;
+    min-height: 100%;
+    margin: 0px;
     padding-left: 0px;
-    padding-right: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    text-align: center;
 }
+
+.text-div {
+    vertical-align: center;
+    height: 100%;
+}
+
 .name {
+    color: white;
     font-family: 'Pacifico', cursive;
-    font-size: 34pt;
-    text-align: center;
-    color: #2093a0;
+    font-size: 24pt;
 }
-.subtitle {
-    font-family: monospace, sans-serif;
-    font-size: 16pt;
-    text-align: center;
-    color: #e5a629;
+
+.job {
+    color: #999999;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 18pt;
 }
-.navlinks {
-    font-family: monospace, sans-serif;
-    font-size: 12pt;
-    text-align: center;
-    margin-top: 12px;
-    color: #2093a0;
-}
-.blognavlinks {
-    font-family: monospace, sans-serif;
-    font-size: 12pt;
-    text-align: center;
-    margin-top: 12px;
-}
-.experience {
-    margin-top: 20px;
-    font-family: monospace, sans-serif;
-    text-align: center;
-}
-.photo {
-    margin-top: 30px;
-    width: 100%;
+
+.img-div {
+    background: url('img/me.jpg') no-repeat left center;
+    background-size:100% cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    -webkit-mask-image:
-        -webkit-gradient(linear, left 25%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
+    height: 100%;
+    max-width: 50%;
+}
+
+.terminal {
+    color: white;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 12pt;
+    padding-top: 20px;
+    padding-left: 0px;
+    overflow-y: scroll;
+    max-height: 100vh;
+}
+
+.greeting {
+    font-size: 16pt;
+}
+
+.terminal-command {
+    visibility: visible;
+    font-size: 10pt;
+    color: #999999;
+    display: inline;
+}
+
+.terminal-output {
 
 }
-.google_logo {
-    padding-top: 4px;
-    width: 80px;
+
+.links-table {
+    width: 100%;
 }
-.apple_logo {
-    width: 28px;
-}
-.paragraph {
-    font-family: monospace, serif;
-    margin-top: 16px;
-    padding-bottom: 24px;
-    color: grey;
-}
-.contact {
-    background-color: #2093a0;
-    text-align: center;
-}
-.icon_color {
-    color: white;
-    padding: 6px;
+
+.toolbar {
+    background: url('img/toolbar.png') no-repeat left center;
+    height:20px;
+    padding: 0px;
 }
