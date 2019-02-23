@@ -41,7 +41,7 @@ html, body {
 }
 
 .img-div {
-    background: url('img/me.jpg') no-repeat left center;
+    background: url('img/me.jpg') no-repeat right center;
     background-size:100% cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
